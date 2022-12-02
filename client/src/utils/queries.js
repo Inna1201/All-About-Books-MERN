@@ -5,7 +5,7 @@ query me {
     me {
       _id
       username
-      bookCount
+      
       email
       savedBooks {
         bookId
@@ -18,3 +18,5 @@ query me {
     }
   }
 `;
+
+// bookCount
