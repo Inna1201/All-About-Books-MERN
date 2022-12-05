@@ -42,10 +42,10 @@ const resolvers = {
 
     saveBook: async (parent, args, context) => {
       if (context.user) {
-        const udatedUser =  User.findOneAndUpdate({ _id: context.user._id }, 
+        const updatedUser =  User.findOneAndUpdate({ _id: context.user._id }, 
             {$push: {savedBooks: args.bookData}}, 
             {new: true});
-        return udatedUser
+        return updatedUser
       }
       throw new AuthenticationError("You need to be logged in!");
     },
